@@ -1,0 +1,10 @@
+setup.py
+funciones/__init__.py
+funciones/funcionesobjetivo.py
+optimizacioneli.egg-info/PKG-INFO
+optimizacioneli.egg-info/SOURCES.txt
+optimizacioneli.egg-info/dependency_links.txt
+optimizacioneli.egg-info/requires.txt
+optimizacioneli.egg-info/top_level.txt
+utils/__init__.py
+utils/graficas.py
