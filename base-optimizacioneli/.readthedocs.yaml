@@ -1,0 +1,13 @@
+version: 2
+
+# Build configuration
+build:
+  image: latest
+
+# Required Python version
+python:
+  version: 3.8
+
+# Documentation format
+formats:
+  - html
