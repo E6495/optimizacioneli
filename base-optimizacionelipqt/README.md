@@ -11,4 +11,4 @@ Este paquete incluye implementaciones de varios métodos de optimización utiliz
 Puedes instalar el paquete utilizando pip:
 
 ```bash
-pip install optimizacionelipq
+pip install optimizacionelipqt

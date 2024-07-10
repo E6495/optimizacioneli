@@ -7,7 +7,7 @@ LONG_DESCRIPTION = 'Paquete de Python para compartir los algoritmos de optimizac
 # Configurando
 setup(
     # El nombre debe coincidir con el nombre de la carpeta principal
-    name="optimizacionelipq", 
+    name="optimizacionelipqt", 
     version=VERSION,
     author="Eli",
     author_email="tuemail@email.com",
