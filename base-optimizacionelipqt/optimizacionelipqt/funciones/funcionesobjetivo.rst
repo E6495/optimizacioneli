@@ -12,9 +12,14 @@ funcion_clase
 Calcula la función cuadrática más tres.
 
 :param x: Valor de entrada.
-:type x: float
+:type x: float o int
 :returns: Resultado de la función.
-:rtype: float
+:type r: float o int
+
+.. code-block:: python
+
+    r = op.funciones.funcion_clase(3.5)
+    print(r)
 
 funcion_lata
 ^^^^^^^^^^^^
@@ -24,7 +29,7 @@ Calcula la función del volumen de una lata en términos del radio.
 :param x: Radio de la lata.
 :type x: float
 :returns: Resultado de la función.
-:rtype: float
+:type r: float
 
 funcion_caja
 ^^^^^^^^^^^^
