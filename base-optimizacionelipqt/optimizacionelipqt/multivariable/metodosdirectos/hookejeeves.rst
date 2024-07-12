@@ -60,5 +60,5 @@ Función de Hooke Jeeves
       import paqueteoptimizacionelizabethrm as op 
 
       p2, iterations = op.multivariable.metodosdirectos.hookejeeves.hooke_jeeves([1, 2], [0.1, 0.1], 1.5, 0.001, lambda *args: op.funciones.himmelblau_function(list(args))
-      print("Algoritmo Hooke Jeeves Función Himmenblau:", p2, iterations)
+      print("Algoritmo Hooke Jeeves Función Himmelblau:", p2, iterations)
 )

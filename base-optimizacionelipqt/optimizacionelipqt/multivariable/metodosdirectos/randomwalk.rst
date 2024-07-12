@@ -33,4 +33,4 @@ Función Random Walk
       import paqueteoptimizacionelizabethrm as op
 
       p4, h = op.multivariable.metodosdirectos.randomwalk.random_walk(op.funciones.himmelblau_function, [0, 2], 1000, 0.3, 0.8)
-      print("Algoritmo Random Walk Función Himmenblau", p4)
+      print("Algoritmo Random Walk Función Himmelblau", p4)

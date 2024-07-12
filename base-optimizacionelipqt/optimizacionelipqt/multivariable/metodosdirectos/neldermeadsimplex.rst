@@ -46,4 +46,4 @@ Funcion Mead Simplex
       import paqueteoptimizacionelizabethrm as op 
 
       p3, hsf = op.multivariable.metodosdirectos.neldermeadsimplex.mead_simplex(op.funciones.himmelblau_function, np.array([1.0, 2.0]), 0.00001, 2, 0.5)
-      print("Algoritmo Mead Simplex Función Himmenblau", p3)
+      print("Algoritmo Mead Simplex Función Himmelblau", p3)

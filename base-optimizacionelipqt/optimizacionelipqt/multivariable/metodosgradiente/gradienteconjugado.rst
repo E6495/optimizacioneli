@@ -66,4 +66,4 @@ Método de Gradiente Conjugado
       import paqueteoptimizacionelizabethrm as op
 
       p6 = op.multivariable.metodosgradiente.gradienteconjugado.conjugate_gradient(op.funciones.himmelblau_function, np.array([1.5, 1.0]), 0.0001, 0.0001, 0.0001, 'secante')
-      print("Algoritmo Gradiente Conjugado Función Himmenblau", p6)
+      print("Algoritmo Gradiente Conjugado Función Himmenlblau", p6)

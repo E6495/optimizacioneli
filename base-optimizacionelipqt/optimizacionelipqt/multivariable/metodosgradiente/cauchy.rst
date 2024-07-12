@@ -66,4 +66,4 @@ Función de Cauchy
       import paqueteoptimizacionelizabethrm as op 
 
       p8 = op.multivariable.metodosgradiente.cauchy(op.funciones.himmelblau_function, np.array([0.1, 0.1]), 0.0001, 0.0001, 100, 'fibonacci')
-      print("Algoritmo Cauchy Función Himmenblau", p8)
+      print("Algoritmo Cauchy Función Himmelblau", p8)
