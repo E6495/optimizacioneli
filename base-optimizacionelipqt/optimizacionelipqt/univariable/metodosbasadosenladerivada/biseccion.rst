@@ -62,8 +62,8 @@ Ejemplo de Uso
 
 .. code-block:: python
 
-import numpy as np
-import paqueteoptimizacionelizabethrm as op 
+    import numpy as np
+    import paqueteoptimizacionelizabethrm as op 
 
-p9 = op.univariable.metodosbasadosenladerivada.biseccion.bisection_method(op.funciones.funcion_1, np.array([1]), 8, 0.0001, op.univariable.metodosbasadosenladerivada.delta_x_func(1), 1000)
-print("Funcion 1 biseccion", p9)
+    p9 = op.univariable.metodosbasadosenladerivada.biseccion.bisection_method(op.funciones.funcion_1, np.array([1]), 8, 0.0001, op.univariable.metodosbasadosenladerivada.delta_x_func(1), 1000)
+    print("Funcion 1 biseccion", p9)
