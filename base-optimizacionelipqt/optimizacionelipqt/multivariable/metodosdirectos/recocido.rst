@@ -10,7 +10,6 @@ Función tweak
 
    Función que aplica una pequeña pertubación aleatoria a una matriz dada.
 
-
    Parámetros
    ----------
    - ``X`` (numpy array): Matriz de entrada a la cual se le aplicará la perturbación.
