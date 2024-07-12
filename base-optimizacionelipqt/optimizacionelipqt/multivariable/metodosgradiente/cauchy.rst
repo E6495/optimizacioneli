@@ -3,15 +3,17 @@
 Método del Cauchy
 ================
 
-Esta sección describe la implementación del método de Cauchy para la optimización.
+Utiliza la dirección negativa del gradiente en cada punto xs. En cada iteración, se calcula el gradiente en el punto actual y se realiza una búsqueda unidimensional en la dirección negativa de este gradiente para encontrar el punto mínimo a lo largo de esa dirección. El algoritmo continúa iterativamente hasta encontrar un punto con un vector gradiente suficientemente pequeño, garantizando la mejora del valor de la función en cada iteración
+Este método trabaja bien cuando x(0) se encuentra lejos del óptimo. Cuando el punto actual está muy cercano el cambio en el gradiente es pequeño. Esto hace que la convergencia se lenta, para acelerarla se puede usar las derivadas de segundo orden.
 
 .. autofunction:: optimizacioneli.multivariable.cauchy
    :noindex:
 
+
 Implementación del Método de Cauchy
 -----------------------------------
 
-La función `Cauchy` implementa el método de Cauchy para la optimización de funciones escalares. Admite varios métodos de búsqueda unidireccional para encontrar un tamaño de paso (`alpha`) adecuado durante cada iteración:
+La función `Cauchy` permite varios métodos de búsqueda unidireccional para encontrar un tamaño de paso (`alpha`) adecuado durante cada iteración:
 
 - **Búsqueda Fibonacci**: Utiliza el algoritmo de búsqueda Fibonacci para encontrar `alpha`.
 - **Método de Cauchy-Raphson**: Utiliza el método de Cauchy-Raphson para encontrar `alpha`.
@@ -22,16 +24,14 @@ La función `Cauchy` implementa el método de Cauchy para la optimización de fu
 - **Método de Bisección**: Implementa el método de bisección para encontrar `alpha`.
 - **Método de Secante**: Utiliza el método de la secante para determinar `alpha`.
 
-Cada uno de estos métodos ofrece diferentes enfoques para determinar el tamaño de paso `alpha` basado en el comportamiento de la función.
-
 Función de Gradiente
 -----------------------------------
 
-La función de gradiente calcula el gradiente de una función en un punto dado utilizando aproximaciones numéricas de las derivadas parciales.
+   Calcula el gradiente de una función en un punto dado utilizando aproximaciones numéricas de las derivadas parciales.
 
    Parámetros
    ----------
-   - ``f`` (callable): Función cuyo gradiente se desea calcular.
+   - ``f`` (callable): Función cuyo gradiente se busca calcular.
    - ``x`` (array-like): Punto en el cual se evalúa el gradiente.
    - ``deltaX`` (float, optional): Paso para la aproximación numérica de las derivadas parciales. Por defecto es 0.001.
 
@@ -39,32 +39,10 @@ La función de gradiente calcula el gradiente de una función en un punto dado u
    -------
    - ``list``: Gradiente de ``f`` en ``x``.
 
-   Ejemplo de Uso
-   --------------
-
-   .. code-block:: python
-
-      import numpy as np
-      from optimizacioneli.multivariable import gradiente
-
-      # Definir una función de prueba
-      def f(x):
-          return x[0]**2 + x[1]**2
-
-      # Punto en el cual evaluar el gradiente
-      x = np.array([1.0, 2.0])
-
-      # Calcular el gradiente
-      gradient = gradiente(f, x)
-      print("Gradiente en {}: {}".format(x, gradient))
-
-.. _optimizacioneli-multivariable-conjugate_gradient:
-
-Método de Cauchy
+Función de Cauchy
 -----------------------------------
 
-El método de Cauchy trabaja bien cuando el punto inicial se encuentra lejos del óptimo. 
-Cuando el punto actual está muy cercano el cambio en el gradiente es pequeño. Esto hace que la convergencia se lenta, para acelerarla se puede usar las derivadas de segundo orden.
+   Implementa el método de Cauchy para la optimización de funciones.
 
    Parámetros
    ----------
@@ -85,19 +63,7 @@ Cuando el punto actual está muy cercano el cambio en el gradiente es pequeño. 
    .. code-block:: python
 
       import numpy as np
-      from optimizacioneli.multivariable import cauchy
+      import paqueteoptimizacionelizabethrm as op 
 
-      # Definir una función de prueba
-      def f(x):
-          return x[0]**2 + x[1]**2
-
-      # Punto inicial y parámetros
-      x0 = np.array([0.0, 0.0])
-      epsilon1 = 1e-5
-      epsilon2 = 1e-5
-      M = 100
-      metodo = 'secante'  # Seleccionar método de búsqueda de paso
-
-      # Aplicar el método de Cauchy
-      optimal_point = cauchy(f, x0, epsilon1, epsilon2, M, metodo)
-      print("Punto óptimo encontrado:", optimal_point)
+      p8 = op.multivariable.metodosgradiente.cauchy(op.funciones.himmelblau_function, np.array([0.1, 0.1]), 0.0001, 0.0001, 100, 'fibonacci')
+      print("Algoritmo Cauchy Función Himmenblau", p8)
