@@ -7,7 +7,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'optimizacionelipqt'
+project = 'paqueteoptimizacionelizabethrm'
 copyright = '2024, ElizabethRM'
 author = 'ElizabethRM'
 release = '0.1'
