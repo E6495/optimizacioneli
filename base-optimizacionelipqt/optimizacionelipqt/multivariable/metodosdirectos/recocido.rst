@@ -3,10 +3,12 @@
 Método de Recocido Simulado
 ==================================
 
+El algoritmo varía de Hill-Climbing en su decisión de cuándo reemplazar X, la solución candidata original, con U, su hijo recién modificado. Específicamente: si U es mejor que X, se reemplaza X por U como de costumbre. Pero si U es peor que X, aún se puede reemplazar X con U con cierta probabilidad
+
 Función tweak
 -------------------
 
-La función `tweak` aplica una pequeña pertubación aleatoria a una matriz dada.
+   Función que aplica una pequeña pertubación aleatoria a una matriz dada.
 
 
    Parámetros
@@ -17,31 +19,15 @@ La función `tweak` aplica una pequeña pertubación aleatoria a una matriz dada
    -------
    - ``numpy array``: Matriz perturbada con valores aleatorios uniformemente distribuidos dentro del rango [-0.5, 0.5].
 
-   Ejemplo de Uso
-   --------------
-
-   .. code-block:: python
-
-      import numpy as np
-      from optimizacioneli.multivariable import tweak
-
-      # Matriz original
-      X = np.array([[1, 2], [3, 4]])
-
-      # Aplicar Recocido Simulado
-      perturbed_X = tweak(X)
-      print("Matriz perturbada:", perturbed_X)
-
-.. _optimizacioneli-multivariable-simulated_annealing:
 
 Algoritmo de Recocido Simulado
 -------------------
 
-El algoritmo de Recocido Simulado es una técnica de optimización estocástica que simula el proceso físico de enfriamiento de metales para encontrar el mínimo global de una función.
+   Implementación del algoritmo de Recocido Simulado para optimización.
 
    Parámetros
    ----------
-   - ``f`` (function): Función objetivo que se desea minimizar.
+   - ``f`` (function): Función objetivo a minimizar.
    - ``x0`` (list or numpy array): Punto inicial de la búsqueda.
    - ``alpha`` (float): Factor de enfriamiento para la temperatura.
    - ``T_initial`` (float): Temperatura inicial.
@@ -59,19 +45,7 @@ El algoritmo de Recocido Simulado es una técnica de optimización estocástica 
    .. code-block:: python
 
       import numpy as np
-      from optimizacioneli.multivariable import simulated_annealing
+      import paqueteoptimizacionelizabethrm as op 
 
-      # Definir una función de prueba
-      def objective_function(x):
-          return x[0]**2 + x[1]**2
-
-      # Punto inicial y parámetros del algoritmo
-      x0 = np.array([1.0, 2.0])
-      alpha = 0.9
-      T_initial = 100.0
-      T_min = 0.1
-      metropolis_size = 10
-
-      # Aplicar el algoritmo de Recocido Simulado
-      best_solution, history = simulated_annealing(objective_function, x0, alpha, T_initial, T_min, metropolis_size)
-      print("Mejor solución encontrada:", best_solution)
+      p5, h2 = op.multivariable.metodosdirectos.recocido.simulated_annealing(op.funciones.sphere_function, [1, 2], 0.9, 10, 0.1, 1000)
+      print("Algoritmo Recocido Función Sphere", p5)
