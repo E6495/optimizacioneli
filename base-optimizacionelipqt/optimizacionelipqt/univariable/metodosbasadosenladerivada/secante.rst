@@ -14,7 +14,7 @@ Parámetros
 ~~~~~~~~~~~
 
 - `f` (callable): La función objetivo cuya derivada se quiere calcular.
-- `x` (float): El punto en el cual se desea calcular la derivada.
+- `x` (float): El punto en el cual se busca calcular la derivada.
 - `delta_x` (float): El pequeño incremento alrededor de `x`.
 
 Retorno
@@ -30,7 +30,7 @@ La función `delta_x_func` determina el valor de delta_x en función de x.
 Parámetros
 ~~~~~~~~~~~
 
-- `x` (float): El punto en el cual se desea determinar delta_x.
+- `x` (float): El punto en el cual se busca determinar delta_x.
 
 Retorno
 ~~~~~~~~~~~
@@ -45,7 +45,7 @@ La función `secant_method` implementa un algoritmo de la secante para encontrar
 Parámetros
 ~~~~~~~~~~~
 
-- `funcion` (callable): La función objetivo que se desea minimizar.
+- `funcion` (callable): La función objetivo que se busca minimizar.
 - `a` (float): Límite inferior del intervalo inicial.
 - `b` (float): Límite superior del intervalo inicial.
 - `epsilon` (float): La tolerancia para la longitud del intervalo y el valor de la derivada.
