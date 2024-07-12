@@ -16,12 +16,12 @@ Calcula la función cuadrática más tres.
 :returns: Resultado de la función.
 :type r: float o int
 
-.. code-block:: python
+    .. code-block:: python
 
-    import paqueteoptimizacionelizabethrm as op
+        import paqueteoptimizacionelizabethrm as op
 
-    r = op.funciones.funcion_clase(3.5)
-    print(r)
+        r = op.funciones.funcion_clase(3.5)
+        print(r)
 
 funcion_lata
 ^^^^^^^^^^^^
@@ -33,12 +33,12 @@ Calcula la función del volumen de una lata en términos del radio.
 :returns: Resultado de la función.
 :type r: float
 
-.. code-block:: python
+    .. code-block:: python
 
-    import paqueteoptimizacionelizabethrm as op
+        import paqueteoptimizacionelizabethrm as op
 
-    r2 = op.funciones.funcion_lata(3)
-    print(r2)
+        r2 = op.funciones.funcion_lata(3)
+        print(r2)
 
 
 funcion_caja
