@@ -59,4 +59,4 @@ Ejemplo de Uso
       import paqueteoptimizacionelizabethrm as op 
 
       p1, h1 = op.multivariable.metodosdirectos.colina.random_walk_colina(op.funciones.sphere_function, op.multivariable.metodosdirectos.colina.max_iterations_terminate(1000), 1000, [2, 15], 0.9)
-      print("Método colina Función Sphere", p1)
+      print("Método Colina Función Sphere", p1)
