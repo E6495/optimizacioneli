@@ -33,6 +33,14 @@ Calcula la función del volumen de una lata en términos del radio.
 :returns: Resultado de la función.
 :type r: float
 
+.. code-block:: python
+
+    import paqueteoptimizacionelizabethrm as op
+
+    r2 = op.funciones.funcion_lata(3)
+    print(r2)
+
+
 funcion_caja
 ^^^^^^^^^^^^
 
