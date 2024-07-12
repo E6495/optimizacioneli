@@ -1,17 +1,12 @@
 .. _golden:
 
-Método de Búsqueda Dorada para Encontrar un Mínimo Local
+Método de Búsqueda Dorada
 ===========================================================
 
-Este archivo documenta el método de búsqueda dorada para encontrar un mínimo local de una función dada.
+El método de búsqueda dorada mapea el espacio de búsqueda (a,b) a un intervalo unitario (0,1). En cada iteración, se eligen dos puntos a una distancia τ de los extremos, asegurando que la región eliminada sea siempre proporcional a la anterior. Esto se logra con τ=0.618, lo que garantiza que uno de los puntos utilizados en cada iteración se considere en la siguiente.
 
 Método de Búsqueda Dorada
 --------------------------
-
-.. autofunction:: busquedaDorada
-
-Descripción
-------------
 
 La función `busquedaDorada` implementa el método de búsqueda dorada, que utiliza la razón áurea para ajustar iterativamente un intervalo [a, b] que contiene un mínimo local de la función objetivo. La función itera hasta que la longitud del intervalo en términos de w (la escala en el intervalo [0, 1]) sea menor que una tolerancia `epsilon`.
 

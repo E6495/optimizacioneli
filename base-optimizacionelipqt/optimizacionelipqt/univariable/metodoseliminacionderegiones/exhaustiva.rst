@@ -1,22 +1,17 @@
 .. _exhaustiva:
 
-Método de Búsqueda Exhaustiva para Encontrar Intervalo de Mínimo Local
+Método de Búsqueda Exhaustiva
 ======================================================================
 
-Este archivo documenta el método de búsqueda exhaustiva para encontrar un intervalo [x1, x3] que contiene un mínimo local de una función dada.
+El método de búsqueda exhaustiva es el más simple de todos, y consiste en calcular los valores de la función en varios puntos igualmente espaciados para enmarcar el óptimo. La búsqueda inicia desde un límite inferior y se comparan tres valores consecutivos de la función, asumiendo que esta es unimodal. Dependiendo del resultado de la comparación, se puede terminar la búsqueda o continuar reemplazando uno de los puntos por uno nuevo. Este proceso se repite hasta que se logra enmarcar el mínimo.
 
 Método de Búsqueda Exhaustiva
 ------------------------------
 
-.. autofunction:: exhaustive_search_method
-
-Descripción
------------
-
 La función `exhaustive_search_method` implementa un algoritmo de búsqueda exhaustiva para encontrar un intervalo [x1, x3] donde una función tiene un mínimo local. Se basa en una precisión dada para determinar el tamaño del paso en la búsqueda.
 
 Parámetros
-----------
+~~~~~~~~~~~
 
 - `a` (float): Límite inferior del intervalo de búsqueda.
 - `b` (float): Límite superior del intervalo de búsqueda.
@@ -24,24 +19,17 @@ Parámetros
 - `funcion` (callable): La función que se desea minimizar.
 
 Retorno
--------
+~~~~~~~~~~~
 
 La función retorna un tuple (x1, x3) que representa el intervalo [x1, x3] que contiene un mínimo local de la función. Si no se encuentra tal intervalo, devuelve None.
 
 Ejemplo de Uso
----------------
-
-A continuación, se muestra un ejemplo básico de cómo usar `exhaustive_search_method`:
+~~~~~~~~~~~
 
 .. code-block:: python
-
+    
     import numpy as np
-    import matplotlib.pyplot as plt
+    import paqueteoptimizacionelizabethrm as op 
 
-    # Definir la función objetivo
-    def funcion(x):
-        return x**2
-
-    # Aplicar el método de búsqueda exhaustiva
-    intervalo = exhaustive_search_method(-1.0, 1.0, 0.01, funcion)
-    print("Intervalo que contiene un mínimo local:", intervalo)
+    p13 = op.univariable.metodoseliminacionderegiones.exhaustiva.exhaustive_search_method(-1.5, 3, 0.001, op.funciones.funcion_4)
+    print("Algoritmo Exhaustiva Funcion 4", p13)
