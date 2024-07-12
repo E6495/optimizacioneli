@@ -1,48 +1,35 @@
 .. _intervalhalving:
 
-Método de Interval Halving Method para Encontrar un Mínimo Local
+Método de Interval Halving Method
 ===========================================================
 
-Este archivo documenta el método de interval halving method para encontrar un intervalo que contiene un mínimo local de una función dada.
+En el método de división del intervalo, se consideran los valores de la función en tres puntos equidistantes dentro del intervalo (a,b). Estos puntos dividen el espacio de búsqueda en cuatro regiones, y se usa una regla de eliminación para descartar parte del espacio basado en los valores de la función. Dependiendo de las comparaciones, se puede reducir el intervalo a la mitad o en un 25%, y este proceso se repite hasta encontrar un intervalo suficientemente pequeño. El método se llama de división del intervalo porque en cada iteración se conserva exactamente la mitad del espacio de búsqueda.
 
 Método de Bisección
 --------------------------
 
-.. autofunction:: interval_halving_method
-
-Descripción
-------------
-
 La función `interval_halving_method` implementa el método de Interval halving Method, que divide iterativamente un intervalo [a, b] en la mitad y decide en cuál mitad buscar el mínimo local de la función objetivo. La función itera hasta que la longitud del intervalo sea menor que una tolerancia `epsilon`.
 
 Parámetros
------------
+~~~~~~~~~~~
 
 - `a` (float): Límite inferior del intervalo inicial.
 - `b` (float): Límite superior del intervalo inicial.
-- `funcion` (callable): La función objetivo que se desea minimizar.
+- `funcion` (callable): La función objetivo a minimizar.
 - `epsilon` (float): La tolerancia para la longitud del intervalo.
 
 Retorno
---------
+~~~~~~~~~~~
 
 La función retorna un tuple que representa el intervalo [a, b] que contiene un mínimo local de la función.
 
 Ejemplo de Uso
-----------------
-
-A continuación, se muestra un ejemplo básico de cómo usar `interval_halving_method`:
+~~~~~~~~~~~
 
 .. code-block:: python
-
+    
     import numpy as np
-    import matplotlib.pyplot as plt
+    import paqueteoptimizacionelizabethrm as op 
 
-    # Definir la función objetivo
-    def funcion(x):
-        return x**2 - 2*x + 1
-
-    # Aplicar el método de bisección
-    intervalo_minimo = interval_halving_method(0, 2, funcion, 0.01)
-    print("Intervalo que contiene el mínimo local:", intervalo_minimo)
-
+    p16 = op.univariable.metodoseliminacionderegiones.intervalhalving.interval_halving_method(-5, 5, op.funciones.funcion_3, 0.0001)
+    print("Funcion 2 Interval", p16)
