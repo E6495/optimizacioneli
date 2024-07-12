@@ -1,6 +1,6 @@
 .. _newton_raphson:
 
-Método de Newton-Raphson para Encontrar Raíces de Funciones
+Método de Newton-Raphson
 ============================================================
 
 Este archivo documenta el método de Newton-Raphson para encontrar una raíz de una función dada.
