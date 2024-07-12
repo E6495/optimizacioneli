@@ -18,6 +18,8 @@ Calcula la función cuadrática más tres.
 
 .. code-block:: python
 
+    import paqueteoptimizacionelizabethrm as op
+
     r = op.funciones.funcion_clase(3.5)
     print(r)
 
