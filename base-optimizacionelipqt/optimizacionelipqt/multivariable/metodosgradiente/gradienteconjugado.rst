@@ -31,7 +31,7 @@ Calcula el gradiente de una función en un punto dado utilizando aproximaciones 
 
 Parámetros
 ~~~~~~~~~~~
-- ``f`` (callable): Función cuyo gradiente se desea calcular.
+- ``f`` (callable): Función gradiente a calcular.
 - ``x`` (array-like): Punto en el cual se evalúa el gradiente.
 - ``deltaX`` (float, optional): Paso para la aproximación numérica de las derivadas parciales. Por defecto es 0.001.
 

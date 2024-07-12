@@ -27,7 +27,7 @@ Implementación del método de Mead (Nelder-Mead) para optimización sin restric
 
 Parámetros
 ~~~~~~~~~~~
-- ``funcion`` (callable): Función objetivo que se desea minimizar.
+- ``funcion`` (callable): Función objetivo a minimizar.
 - ``punto_inicial`` (list): Punto inicial alrededor del cual se realiza la búsqueda.
 - ``epsilon`` (float): Criterio de convergencia, diferencia mínima entre los valores de la función.
 - ``gamma`` (float): Parámetro de reflexión.

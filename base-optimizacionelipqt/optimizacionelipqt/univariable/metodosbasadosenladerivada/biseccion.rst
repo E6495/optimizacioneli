@@ -14,7 +14,7 @@ Parámetros
 ~~~~~~~~~~~
 
 - `f` (callable): La función objetivo cuya derivada se quiere calcular.
-- `x` (float): El punto en el cual se desea calcular la derivada.
+- `x` (float): Punto en que se calcula la derivada.
 - `delta_x` (float): El pequeño incremento alrededor de `x`.
 
 Retorno
@@ -30,7 +30,7 @@ La función `delta_x_func` determina el valor de delta_x en función de x.
 Parámetros
 ~~~~~~~~~~~
 
-- `x` (float): El punto en el cual se desea determinar delta_x.
+- `x` (float): Punto en el que se determina delta_x.
 
 Retorno
 ~~~~~~~~~~~
@@ -45,7 +45,7 @@ Parámetros
 
 La función `bisection_method` implementa el método de bisección para encontrar un intervalo [x1, x2] donde una función tiene un mínimo local. Utiliza la derivada primera calculada mediante el método de diferencias centrales para verificar las condiciones iniciales del método.
 
-- `funcion` (callable): La función objetivo que se desea minimizar.
+- `funcion` (callable): La función objetivo a minimizar.
 - `a` (float): Límite inferior del intervalo inicial.
 - `b` (float): Límite superior del intervalo inicial.
 - `epsilon` (float): La tolerancia para la longitud del intervalo y el valor de la derivada.

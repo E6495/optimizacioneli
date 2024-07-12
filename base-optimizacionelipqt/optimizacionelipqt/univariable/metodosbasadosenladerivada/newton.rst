@@ -14,7 +14,7 @@ Parámetros
 ~~~~~~~~~~~
 
 - `f` (callable): La función objetivo cuya derivada se quiere calcular.
-- `x` (float): El punto en el cual se desea calcular la derivada.
+- `x` (float): Punto en el que se calcula la derivada.
 - `delta_x` (float): El pequeño incremento alrededor de `x`.
 
 Retorno
@@ -31,7 +31,7 @@ Parámetros
 ~~~~~~~~~~~
 
 - `f` (callable): La función objetivo cuya derivada se quiere calcular.
-- `x` (float): El punto en el cual se desea calcular la derivada.
+- `x` (float): El punto en el cual se busca calcular la derivada.
 - `delta_x` (float): El pequeño incremento alrededor de `x`.
 
 Retorno
@@ -47,7 +47,7 @@ La función `delta_x_func` determina el valor de delta_x en función de x.
 Parámetros
 ~~~~~~~~~~~
 
-- `x` (float): El punto en el cual se desea determinar delta_x.
+- `x` (float): El punto en el cual se busca determinar delta_x.
 
 Retorno
 ~~~~~~~~~~~
@@ -62,7 +62,7 @@ La función `newton_raphson_method` implementa el método de Newton-Raphson para
 Parámetros
 ~~~~~~~~~~~
 
-- `funcion` (callable): La función objetivo cuya raíz se desea encontrar.
+- `funcion` (callable): La función objetivo cuya raíz se busca encontrar.
 - `initial_guess` (float): El valor inicial para comenzar la búsqueda de la raíz.
 - `delta_x_funcion` (callable): Función que determina el valor de delta_x en función de x.
 - `epsilon` (float): La tolerancia para el criterio de convergencia.

@@ -14,7 +14,7 @@ Parámetros
 ~~~~~~~~~~~
 - ``xc`` (array-like): Punto actual en el espacio de búsqueda.
 - ``delta`` (array-like): Vector de pasos para moverse en cada dirección.
-- ``function`` (callable): Función objetivo que se desea minimizar.
+- ``function`` (callable): Función objetivo a minimizar.
 
 Retorna
 ~~~~~~~~~~~
@@ -45,7 +45,7 @@ Parámetros
 - ``deltas`` (array-like): Vector de pasos para moverse en cada dirección.
 - ``alpha`` (float): Factor de reducción de pasos en caso de fracaso en la búsqueda.
 - ``epsilon`` (float): Tolerancia para detener el algoritmo.
-- ``function`` (callable): Función objetivo que se desea minimizar.
+- ``function`` (callable): Función objetivo a minimizar.
 
 Retorna
 ~~~~~~~~~~~

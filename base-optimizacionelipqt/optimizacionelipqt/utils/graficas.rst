@@ -40,7 +40,7 @@ La función `plot_rangos_minimos` grafica la función dada y los puntos mínimos
 Parámetros
 ~~~~~~~~~~~
 
-- `funcion` (callable): Función objetivo que se desea minimizar.
+- `funcion` (callable): Función objetivo que se busca minimizar.
 - `a` (float): Límite inferior del rango de búsqueda.
 - `b` (float): Límite superior del rango de búsqueda.
 - `precisiones` (list): Lista de precisiones para el método de optimización.

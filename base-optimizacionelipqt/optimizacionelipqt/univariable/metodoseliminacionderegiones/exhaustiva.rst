@@ -16,7 +16,7 @@ Parámetros
 - `a` (float): Límite inferior del intervalo de búsqueda.
 - `b` (float): Límite superior del intervalo de búsqueda.
 - `precision` (float): Tamaño del paso para la búsqueda.
-- `funcion` (callable): La función que se desea minimizar.
+- `funcion` (callable): La función que se busca minimizar.
 
 Retorno
 ~~~~~~~~~~~

@@ -13,7 +13,7 @@ Función para calcular el (n+1)-ésimo número de Fibonacci.
 Parámetros
 ~~~~~~~~~~~
 
-- `n` (int): La función objetivo que se desea minimizar.
+- `n` (int): La función objetivo que se busca minimizar.
 
 Retorno
 ~~~~~~~~~~~
@@ -28,7 +28,7 @@ La función `fibonacci_search` implementa un método iterativo basado en la secu
 Parámetros
 ~~~~~~~~~~~
 
-- `funcion` (callable): La función objetivo que se desea minimizar.
+- `funcion` (callable): La función objetivo que se busca minimizar.
 - `a` (float): Límite inferior del intervalo inicial.
 - `b` (float): Límite superior del intervalo inicial.
 - `n` (int): Número de iteraciones, relacionado con la precisión del método.

@@ -13,7 +13,7 @@ La función `bounding_phase_method` utiliza un enfoque iterativo para encontrar 
 Parámetros
 ~~~~~~~~~~~
 
-- `funcion` (callable): La función objetivo que se desea minimizar.
+- `funcion` (callable): La función objetivo que se busca minimizar.
 - `initial_guess` (float): La conjetura inicial para el punto de inicio.
 - `Delta` (float): El tamaño del paso inicial.
 
