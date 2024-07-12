@@ -3,7 +3,7 @@
 Método del Gradiente Conjugado
 ==============================
 
-Esta sección describe la implementación del método de gradiente conjugado para la optimización.
+El método de gradiente conjugado utiliza derivadas de primer orden para encontrar direcciones de búsqueda conjugadas asumiendo que la función objetivo es cuadrática cerca del mínimo. La dirección de búsqueda inicial es la del descenso más pronunciado y las direcciones subsecuentes se calculan recursivamente.
 
 .. autofunction:: optimizacioneli.multivariable.gradienteconjugado
    :noindex:
@@ -11,7 +11,7 @@ Esta sección describe la implementación del método de gradiente conjugado par
 Implementación del Método de Gradiente Conjugado
 ------------------------------------------------
 
-La función `gradiente conjugado` implementa el método de gradiente conjugado para la optimización de funciones escalares. Admite varios métodos de búsqueda unidireccional para encontrar un tamaño de paso (`alpha`) adecuado durante cada iteración:
+La función `gradiente conjugado` permite varios métodos de búsqueda unidireccional para encontrar un tamaño de paso (`alpha`) adecuado durante cada iteración:
 
 - **Búsqueda Fibonacci**: Utiliza el algoritmo de búsqueda Fibonacci para encontrar `alpha`.
 - **Método de Newton-Raphson**: Utiliza el método de Newton-Raphson para encontrar `alpha`.
@@ -27,75 +27,43 @@ Cada uno de estos métodos ofrece diferentes enfoques para determinar el tamaño
 Función de Gradiente
 --------------------
 
-La función de gradiente calcula el gradiente de una función en un punto dado utilizando aproximaciones numéricas de las derivadas parciales.
+   Calcula el gradiente de una función en un punto dado utilizando aproximaciones numéricas de las derivadas parciales.
 
-Parámetros
-^^^^^^^^^^
-- ``f`` (callable): Función cuyo gradiente se desea calcular.
-- ``x`` (array-like): Punto en el cual se evalúa el gradiente.
-- ``deltaX`` (float, optional): Paso para la aproximación numérica de las derivadas parciales. Por defecto es 0.001.
+   Parámetros
+   ----------
+   - ``f`` (callable): Función cuyo gradiente se desea calcular.
+   - ``x`` (array-like): Punto en el cual se evalúa el gradiente.
+   - ``deltaX`` (float, optional): Paso para la aproximación numérica de las derivadas parciales. Por defecto es 0.001.
 
-Retorna
-^^^^^^^
-- ``list``: Gradiente de ``f`` en ``x``.
-
-Ejemplo de Uso
-^^^^^^^^^^^^^^
-
-.. code-block:: python
-
-   import numpy as np
-   from optimizacioneli.multivariable import gradiente
-
-   # Definir una función de prueba
-   def f(x):
-       return x[0]**2 + x[1]**2
-
-   # Punto en el cual evaluar el gradiente
-   x = np.array([1.0, 2.0])
-
-   # Calcular el gradiente
-   gradient = gradiente(f, x)
-   print("Gradiente en {}: {}".format(x, gradient))
-
+   Retorna
+   -------
+   - ``list``: Gradiente de ``f`` en ``x``.
 
 Método de Gradiente Conjugado
 -----------------------------
 
-El método de gradiente conjugado es un método iterativo para la minimización de funciones que utiliza la dirección conjugada de búsqueda para actualizar iterativamente el punto de evaluación.
+   El método de gradiente conjugado es un método iterativo para la minimización de funciones que utiliza la dirección conjugada de búsqueda para actualizar iterativamente el punto de evaluación.
 
-Parámetros
-^^^^^^^^^^
-- ``f`` (callable): Función objetivo a minimizar.
-- ``x0`` (array-like): Punto inicial de búsqueda.
-- ``epsilon1`` (float): Tolerancia para el paso de línea.
-- ``epsilon2`` (float): Tolerancia para la norma del cambio relativo.
-- ``epsilon3`` (float): Tolerancia para la norma del gradiente.
-- ``metodo`` (str): Método para la búsqueda de paso de línea ('biseccion', 'interval', 'bounding', 'secante', 'exhaustiva', 'dorado', 'fibonacci', 'newton').
+   Parámetros
+   ---------
+   - ``f`` (callable): Función objetivo a minimizar.
+   - ``x0`` (array-like): Punto inicial de búsqueda.
+   - ``epsilon1`` (float): Tolerancia para el paso de línea.
+   - ``epsilon2`` (float): Tolerancia para la norma del cambio relativo.
+   - ``epsilon3`` (float): Tolerancia para la norma del gradiente.
+   - ``metodo`` (str): Método para la búsqueda de paso de línea ('biseccion', 'interval', 'bounding', 'secante', 'exhaustiva', 'dorado', 'fibonacci', 'newton').
 
-Retorna
-^^^^^^^
-- ``array-like``: Punto óptimo encontrado que minimiza la función ``f``.
+   Retorna
+   --------
+   - ``array-like``: Punto óptimo encontrado que minimiza la función ``f``.
 
-Ejemplo de Uso
-^^^^^^^^^^^^^^
+   Ejemplo de Uso
+   ---------------
 
-.. code-block:: python
+   .. code-block:: python
 
-   import numpy as np
-   from optimizacioneli.multivariable import conjugate_gradient
+      import numpy as np
+      import paqueteoptimizacionelizabethrm as op
 
-   # Definir una función de prueba
-   def f(x):
-       return x[0]**2 + x[1]**2
-
-   # Punto inicial y parámetros
-   x0 = np.array([1.0, 2.0])
-   epsilon1 = 1e-5
-   epsilon2 = 1e-5
-   epsilon3 = 1e-5
-   metodo = 'biseccion'  # Seleccionar método de búsqueda de paso
-
-   # Aplicar el método de gradiente conjugado
-   optimal_point = conjugate_gradient(f, x0, epsilon1, epsilon2, epsilon3, metodo)
-   print("Punto óptimo encontrado:", optimal_point)
+      p6 = op.multivariable.metodosgradiente.gradienteconjugado.conjugate_gradient(op.funciones.himmelblau_function, np.array([1.5, 1.0]), 0.0001, 0.0001, 0.0001, 'secante')
+      print("Algoritmo Gradiente Conjugado Función Himmenblau", p6)
