@@ -12,9 +12,9 @@ funcion_clase
 Calcula la función cuadrática más tres.
 
 :param x: Valor de entrada.
-:type x: float o int
+:type x: float
 :returns: Resultado de la función.
-:type r: float o int
+:type r: float
 
     .. code-block:: python
 
@@ -49,7 +49,14 @@ Calcula la función para optimizar el volumen de una caja.
 :param L: Longitud de la caja.
 :type L: float
 :returns: Resultado de la función.
-:rtype: float
+:type r: float
+
+    .. code-block:: python
+
+        import paqueteoptimizacionelizabethrm as op
+
+        r3 = op.funciones.funcion_caja(4)
+        print(r3)
 
 funcion_1
 ^^^^^^^^
@@ -59,7 +66,14 @@ Calcula una función cuadrática más un término racional.
 :param x: Valor de entrada.
 :type x: float
 :returns: Resultado de la función.
-:rtype: float
+:type r: float
+
+    .. code-block:: python
+
+        import paqueteoptimizacionelizabethrm as op
+
+        r4 = op.funciones.funcion_1(3)
+        print(r4)
 
 funcion_2
 ^^^^^^^^
@@ -69,7 +83,14 @@ Calcula una función cúbica con un término lineal y constante.
 :param x: Valor de entrada.
 :type x: float
 :returns: Resultado de la función.
-:rtype: float
+:type r: float
+
+    .. code-block:: python
+
+        import paqueteoptimizacionelizabethrm as op
+
+        r5 = op.funciones.funcion_2(4.5)
+        print(r5)
 
 funcion_3
 ^^^^^^^^
@@ -79,7 +100,14 @@ Calcula una función polinómica de cuarto grado con un término cuadrático y c
 :param x: Valor de entrada.
 :type x: float
 :returns: Resultado de la función.
-:rtype: float
+:type r: float
+
+    ..code-block:: python
+        
+        import paqueteoptimizacionelizabethrm as op
+
+        r6 = op.funciones.funcion_3(3)
+        print(r6)
 
 funcion_4
 ^^^^^^^^
@@ -89,7 +117,14 @@ Calcula una función polinómica de cuarto grado con términos cúbicos y cuadr�
 :param x: Valor de entrada.
 :type x: float
 :returns: Resultado de la función.
-:rtype: float
+:type r: float
+
+    ..code-block:: python
+
+        import paqueteoptimizacionelizabethrm as op
+
+        r7 = op.funciones.funcion_4(3.5)
+        print(r7)
 
 Funciones Multivariables
 ------------------------
@@ -102,9 +137,16 @@ Calcula la función de Rastrigin.
 :param x: Vector de entrada.
 :type x: list of float
 :param A: Constante, valor por defecto es 10.
-:type A: float, optional
+:type A: float
 :returns: Resultado de la función.
-:rtype: float
+:type r: float
+
+    ..code-block:: python
+
+        import paqueteoptimizacionelizabethrm as op
+
+        r8 = op.funciones.rastrigin_function([0, 5, 10])
+        print(r8)
 
 ackley_function
 ^^^^^^^^^^^^^^^
@@ -116,6 +158,13 @@ Calcula la función de Ackley.
 :returns: Resultado de la función.
 :rtype: float
 
+    ..code-block:: python
+
+        import paqueteoptimizacionelizabethrm as op
+
+        r9 = op.funciones.ackley_function([0, 1])
+        print(r9)
+
 sphere_function
 ^^^^^^^^^^^^^^^
 
@@ -126,6 +175,13 @@ Calcula la función Sphere.
 :returns: Resultado de la función.
 :rtype: float
 
+    ..code-block:: python
+
+        import paqueteoptimizacionelizabethrm as op
+
+        r10 = op.funciones.sphere_function([1, 5, 10])
+        print(r10)
+
 rosenbrock_function
 ^^^^^^^^^^^^^^^^^^^
 
@@ -135,6 +191,13 @@ Calcula la función de Rosenbrock.
 :type x: list of float
 :returns: Resultado de la función.
 :rtype: float
+
+    ..code-block:: python
+
+        import paqueteoptimizacionelizabethrm as op
+
+        r11 = op.funciones.rosenbrock_function([1, 5, 10])
+        print(r11)
 
 beale_function
 ^^^^^^^^^^^^^^
