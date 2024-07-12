@@ -3,10 +3,13 @@
 Algoritmo de Colina
 =========================
 
-El algoritmo de Colina es una técnica de optimización que genera pasos aleatorios para explorar el espacio de búsqueda en busca de un mínimo global.
+El algoritmo de Colina es una técnica de optimización que genera pasos aleatorios para explorar el espacio de búsqueda en busca de un mínimo global. Se generan soluciones aleatorias a partir de un punto dado, pero solo se cambia de posición sí y sólo sí, la nueva solución es mejor.
+
 
 Función generación random
 --------------
+
+   Genera un paso aleatorio para la optimización.
 
    Parámetros
    ----------
@@ -20,9 +23,11 @@ Función generación random
 Función colina
 ----------
 
+   Algoritmo de Random Walk para la optimización.
+
    Parámetros
    ----------
-   - ``f`` (callable): Función objetivo que se desea minimizar.
+   - ``f`` (callable): Función objetivo a minimizar.
    - ``terminate`` (callable): Función de terminación que determina cuándo detener el algoritmo.
    - ``max_iter`` (int): Número máximo de iteraciones permitidas.
    - ``x0`` (array-like): Punto inicial de la búsqueda.
@@ -32,27 +37,26 @@ Función colina
    -------
    - ``tuple``: Mejor punto encontrado y lista de puntos históricos durante la búsqueda.
 
-   Ejemplo de Uso
-   --------------
+Función de terminación
+----------
+
+   Criterio de terminación basado en el número máximo de iteraciones.
+
+   Paámetros
+   ---------
+   - ``max_iter`` (int): Número máximo de iteraciones permitidas.
+
+   Retorna
+   ---------
+   ``callable``: Función que verifica si el número atual de iteraciones ha alcanzado max_iter.
+
+Ejemplo de Uso
+--------------
 
    .. code-block:: python
 
       import numpy as np
-      from optimizacioneli.multivariable import random_walk_colina, max_iterations_terminate
+      import paqueteoptimizacionelizabethrm as op 
 
-      # Función objetivo de prueba (parábola)
-      def objective_function(x):
-          return x[0]**2 + x[1]**2
-
-      # Criterio de terminación basado en el número máximo de iteraciones
-      max_iter = 100
-      terminate_condition = max_iterations_terminate(max_iter)
-
-      # Parámetros del algoritmo
-      x0 = np.array([5.0, 5.0])
-      sigma = 0.5
-
-      # Aplicar el algoritmo de Colina
-      best_solution, history = random_walk_colina(objective_function, terminate_condition, max_iter, x0, sigma)
-      print("Mejor solución encontrada:", best_solution)
-      print("Historial de puntos explorados:", history)
+      p1, h1 = op.multivariable.metodosdirectos.colina.random_walk_colina(op.funciones.sphere_function, op.multivariable.metodosdirectos.colina.max_iterations_terminate(1000), 1000, [2, 15], 0.9)
+      print("Método colina Función Sphere", p1)
