@@ -1,44 +1,34 @@
 .. _bounding:
 
-Método de la Fase de Búsqueda para Encontrar Mínimos Locales
+Método de Bounding
 =============================================================
 
-Este archivo documenta el método de la fase de búsqueda para encontrar un intervalo que contiene un mínimo local de una función dada.
+El método de la fase de acotación se utiliza para enmarcar el mínimo de una función unimodal. Este método garantiza que el mínimo se encuentre dentro de un intervalo. El algoritmo comienza con una suposición inicial y determina una dirección de búsqueda basada en dos evaluaciones adicionales de la función cercanas a la suposición inicial. Posteriormente, se adopta una estrategia de búsqueda exponencial para alcanzar el óptimo.
 
-Método de la Fase de Búsqueda
+Método de Bounding
 -----------------------------
-
-.. autofunction:: bounding_phase_method
-
-Descripción
------------
 
 La función `bounding_phase_method` utiliza un enfoque iterativo para encontrar un intervalo (a, b) que contiene un mínimo local de una función, basado en una conjetura inicial (`initial_guess`) y un tamaño de paso inicial (`Delta`).
 
 Parámetros
-----------
+~~~~~~~~~~~
 
 - `funcion` (callable): La función objetivo que se desea minimizar.
 - `initial_guess` (float): La conjetura inicial para el punto de inicio.
 - `Delta` (float): El tamaño del paso inicial.
 
 Retorno
--------
+~~~~~~~~~~~
 
 La función retorna un tuple (a, b) que representa el intervalo que contiene un mínimo local de la función.
 
 Ejemplo de Uso
----------------
-
-A continuación, se muestra un ejemplo básico de cómo usar `bounding_phase_method`:
+~~~~~~~~~~~
 
 .. code-block:: python
-
+    
     import numpy as np
-    import matplotlib.pyplot as plt
+    import paqueteoptimizacionelizabethrm as op 
 
-    # Definir la función objetivo
-    def funcion(x):
-        return x**2
-
-    # Aplicar el 
+    p12 = op.univariable.metodoseliminacionderegiones.bounding.bounding_phase_method(op.funciones.funcion_3, 0.6, 0.0001)
+    print("Algoritmo Bounding Función 3", p12)

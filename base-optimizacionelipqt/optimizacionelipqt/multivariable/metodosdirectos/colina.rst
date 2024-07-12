@@ -42,7 +42,7 @@ Función de terminación
 
 Criterio de terminación basado en el número máximo de iteraciones.
 
-Paámetros
+Parámetros
 ~~~~~~~~~~~
 - ``max_iter`` (int): Número máximo de iteraciones permitidas.
 
