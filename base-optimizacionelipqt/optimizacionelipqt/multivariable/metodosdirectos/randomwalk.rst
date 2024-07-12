@@ -12,7 +12,7 @@ Función Random Walk
 Implementa el algoritmo Random Walk para minimizar una función objetivo.
 
 Parámetros
-----------
+~~~~~~~~~~~
 - ``f`` (callable): Función objetivo a minimizar.
 - ``x0`` (list or numpy array): Punto de inicio del algoritmo.
 - ``max_iter`` (int): Número máximo de iteraciones.
@@ -20,12 +20,12 @@ Parámetros
 - ``sigma`` (float): Desviación estándar de la distribución normal para generar pasos aleatorios.
 
 Retorna
--------
+~~~~~~~~~~~
 - ``numpy array``: La mejor solución encontrada que minimiza la función ``f``.
 - ``list``: Historial de puntos visitados durante la búsqueda.
 
 Ejemplo de Uso
---------------
+~~~~~~~~~~~
 
 .. code-block:: python
 

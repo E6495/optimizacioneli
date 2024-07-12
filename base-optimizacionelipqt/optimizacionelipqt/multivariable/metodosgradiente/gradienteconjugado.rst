@@ -30,13 +30,13 @@ Función de Gradiente
 Calcula el gradiente de una función en un punto dado utilizando aproximaciones numéricas de las derivadas parciales.
 
 Parámetros
-----------
+~~~~~~~~~~~
 - ``f`` (callable): Función cuyo gradiente se desea calcular.
 - ``x`` (array-like): Punto en el cual se evalúa el gradiente.
 - ``deltaX`` (float, optional): Paso para la aproximación numérica de las derivadas parciales. Por defecto es 0.001.
 
 Retorna
--------
+~~~~~~~~~~~
 - ``list``: Gradiente de ``f`` en ``x``.
 
 Método de Gradiente Conjugado
@@ -45,7 +45,7 @@ Método de Gradiente Conjugado
 El método de gradiente conjugado es un método iterativo para la minimización de funciones que utiliza la dirección conjugada de búsqueda para actualizar iterativamente el punto de evaluación.
 
 Parámetros
----------
+~~~~~~~~~~~
 - ``f`` (callable): Función objetivo a minimizar.
 - ``x0`` (array-like): Punto inicial de búsqueda.
 - ``epsilon1`` (float): Tolerancia para el paso de línea.
@@ -54,11 +54,11 @@ Parámetros
 - ``metodo`` (str): Método para la búsqueda de paso de línea ('biseccion', 'interval', 'bounding', 'secante', 'exhaustiva', 'dorado', 'fibonacci', 'newton').
 
 Retorna
---------
+~~~~~~~~~~~
 - ``array-like``: Punto óptimo encontrado que minimiza la función ``f``.
 
 Ejemplo de Uso
----------------
+~~~~~~~~~~~
 
 .. code-block:: python
 

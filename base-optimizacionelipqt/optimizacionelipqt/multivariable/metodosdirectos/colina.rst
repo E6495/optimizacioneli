@@ -12,12 +12,12 @@ Función generación random
 Genera un paso aleatorio para la optimización.
 
 Parámetros
-----------
+~~~~~~~~~~~
 - ``x`` (array-like): Punto actual en el espacio de búsqueda.
 - ``sigma`` (float): Desviación estándar para la distribución normal que genera el paso aleatorio.
 
 Retorna
--------
+~~~~~~~~~~~
 - ``np.ndarray``: Nuevo punto generado como un paso aleatorio desde x.
 
 Función colina
@@ -26,7 +26,7 @@ Función colina
 Algoritmo de Random Walk Colina para la optimización.
 
 Parámetros
-----------
+~~~~~~~~~~~
 - ``f`` (callable): Función objetivo a minimizar.
 - ``terminate`` (callable): Función de terminación que determina cuándo detener el algoritmo.
 - ``max_iter`` (int): Número máximo de iteraciones permitidas.
@@ -34,7 +34,7 @@ Parámetros
 - ``sigma`` (float): Desviación estándar para generar pasos aleatorios.
 
 Retorna
--------
+~~~~~~~~~~~
 - ``tuple``: Mejor punto encontrado y lista de puntos históricos durante la búsqueda.
 
 Función de terminación
@@ -43,15 +43,15 @@ Función de terminación
 Criterio de terminación basado en el número máximo de iteraciones.
 
 Paámetros
----------
+~~~~~~~~~~~
 - ``max_iter`` (int): Número máximo de iteraciones permitidas.
 
 Retorna
----------
+~~~~~~~~~~~
 ``callable``: Función que verifica si el número atual de iteraciones ha alcanzado max_iter.
 
 Ejemplo de Uso
---------------
+~~~~~~~~~~~
 
 .. code-block:: python
 

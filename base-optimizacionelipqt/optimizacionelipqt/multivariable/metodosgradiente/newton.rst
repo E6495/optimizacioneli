@@ -25,14 +25,14 @@ Función Matriz Hessiana
 Calcula la matriz hessiana de la funcion f en un punto x dado.
 
 Parámetros
-----------
+~~~~~~~~~~~
 
 ``f`` (callable): Función cuya matriz hessiana a calcular.
 ``x`` (array-like): Punto en el cual se evalúa la matriz hessiana.
 ``deltaX`` (float): Paso para la aproximación numérica de las derivadas parciales.
 
 Retorna
----------
+~~~~~~~~~~~
 
 ``list of list``: Matriz hessiana de f en x.
 
@@ -42,20 +42,20 @@ Función de Gradiente
 Calcula el gradiente de una función en un punto dado utilizando aproximaciones numéricas de las derivadas parciales.
 
 Parámetros
-----------
+~~~~~~~~~~~
 - ``f`` (callable): Función cuyo gradiente se busca calcular.
 - ``x`` (array-like): Punto en el cual se evalúa el gradiente.
 - ``deltaX`` (float, optional): Paso para la aproximación numérica de las derivadas parciales. Por defecto es 0.001.
 
 Retorna
--------
+~~~~~~~~~~~
 - ``list``: Gradiente de ``f`` en ``x``.
 
 Función de Cauchy
 -------------------
 
 Parámetros
-----------
+~~~~~~~~~~~
 
 - ``funcion`` (callable): Función objetivo a minimizar.
 - ``x0`` (array-like): Punto inicial para la optimización.
@@ -65,12 +65,12 @@ Parámetros
 - ``metodo`` (str): Método para la búsqueda unidireccional ('fibonacci', 'newton', 'dorado', 'interval', 'bounding', 'exhaustiva', 'biseccion', 'secante').
 
 Retorna
--------
+~~~~~~~~~~~
 
 - ``np.ndarray``: Punto optimizado que aproxima el mínimo de la función.
 
 Ejemplo de Uso
---------------
+~~~~~~~~~~~
 
 .. code-block:: python
     
