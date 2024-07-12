@@ -7,7 +7,7 @@ Utiliza la dirección negativa del gradiente en cada punto xs. En cada iteració
 Este método trabaja bien cuando x(0) se encuentra lejos del óptimo. Cuando el punto actual está muy cercano el cambio en el gradiente es pequeño. Esto hace que la convergencia se lenta, para acelerarla se puede usar las derivadas de segundo orden.
 
 .. autofunction:: optimizacioneli.multivariable.cauchy
-   :noindex:
+:noindex:
 
 
 Implementación del Método de Cauchy
@@ -27,43 +27,43 @@ La función `Cauchy` permite varios métodos de búsqueda unidireccional para en
 Función de Gradiente
 -----------------------------------
 
-   Calcula el gradiente de una función en un punto dado utilizando aproximaciones numéricas de las derivadas parciales.
+Calcula el gradiente de una función en un punto dado utilizando aproximaciones numéricas de las derivadas parciales.
 
-   Parámetros
-   ----------
-   - ``f`` (callable): Función cuyo gradiente se busca calcular.
-   - ``x`` (array-like): Punto en el cual se evalúa el gradiente.
-   - ``deltaX`` (float, optional): Paso para la aproximación numérica de las derivadas parciales. Por defecto es 0.001.
+Parámetros
+----------
+- ``f`` (callable): Función cuyo gradiente se busca calcular.
+- ``x`` (array-like): Punto en el cual se evalúa el gradiente.
+- ``deltaX`` (float, optional): Paso para la aproximación numérica de las derivadas parciales. Por defecto es 0.001.
 
-   Retorna
-   -------
-   - ``list``: Gradiente de ``f`` en ``x``.
+Retorna
+-------
+- ``list``: Gradiente de ``f`` en ``x``.
 
 Función de Cauchy
 -----------------------------------
 
-   Implementa el método de Cauchy para la optimización de funciones.
+Implementa el método de Cauchy para la optimización de funciones.
 
-   Parámetros
-   ----------
-   - ``funcion`` (callable): Función objetivo a minimizar.
-   - ``x0`` (array-like): Punto inicial de búsqueda.
-   - ``epsilon1`` (float): Tolerancia para la norma del gradiente que determina la convergencia.
-   - ``epsilon2`` (float): Tolerancia para la diferencia relativa entre dos iteraciones consecutivas.
-   - ``M`` (int): Número máximo de iteraciones permitidas.
-   - ``metodo`` (str): Método para la búsqueda de paso de línea ('biseccion', 'interval', 'bounding', 'secante', 'exhaustiva', 'dorado', 'fibonacci', 'newton').
+Parámetros
+----------
+- ``funcion`` (callable): Función objetivo a minimizar.
+- ``x0`` (array-like): Punto inicial de búsqueda.
+- ``epsilon1`` (float): Tolerancia para la norma del gradiente que determina la convergencia.
+- ``epsilon2`` (float): Tolerancia para la diferencia relativa entre dos iteraciones consecutivas.
+- ``M`` (int): Número máximo de iteraciones permitidas.
+- ``metodo`` (str): Método para la búsqueda de paso de línea ('biseccion', 'interval', 'bounding', 'secante', 'exhaustiva', 'dorado', 'fibonacci', 'newton').
 
-   Retorna
-   -------
-   - ``array-like``: Punto óptimo encontrado que minimiza la función ``f``.
+Retorna
+-------
+- ``array-like``: Punto óptimo encontrado que minimiza la función ``f``.
 
-   Ejemplo de Uso
-   --------------
+Ejemplo de Uso
+--------------
 
-   .. code-block:: python
+.. code-block:: python
 
-      import numpy as np
-      import paqueteoptimizacionelizabethrm as op 
+   import numpy as np
+   import paqueteoptimizacionelizabethrm as op 
 
-      p8 = op.multivariable.metodosgradiente.cauchy(op.funciones.himmelblau_function, np.array([0.1, 0.1]), 0.0001, 0.0001, 100, 'fibonacci')
-      print("Algoritmo Cauchy Función Himmelblau", p8)
+   p8 = op.multivariable.metodosgradiente.cauchy(op.funciones.himmelblau_function, np.array([0.1, 0.1]), 0.0001, 0.0001, 100, 'fibonacci')
+   print("Algoritmo Cauchy Función Himmelblau", p8)

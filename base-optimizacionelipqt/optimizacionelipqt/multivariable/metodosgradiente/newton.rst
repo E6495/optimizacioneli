@@ -22,60 +22,60 @@ La función `newton` permite varios métodos de búsqueda unidireccional para en
 Función Matriz Hessiana
 -----------------------
 
-    Calcula la matriz hessiana de la funcion f en un punto x dado.
+Calcula la matriz hessiana de la funcion f en un punto x dado.
 
-    Parámetros
-    ----------
+Parámetros
+----------
 
-    ``f`` (callable): Función cuya matriz hessiana a calcular.
-    ``x`` (array-like): Punto en el cual se evalúa la matriz hessiana.
-    ``deltaX`` (float): Paso para la aproximación numérica de las derivadas parciales.
+``f`` (callable): Función cuya matriz hessiana a calcular.
+``x`` (array-like): Punto en el cual se evalúa la matriz hessiana.
+``deltaX`` (float): Paso para la aproximación numérica de las derivadas parciales.
 
-    Retorna
-    ---------
+Retorna
+---------
 
-    ``list of list``: Matriz hessiana de f en x.
+``list of list``: Matriz hessiana de f en x.
 
 Función de Gradiente
 -----------------------------------
 
-   Calcula el gradiente de una función en un punto dado utilizando aproximaciones numéricas de las derivadas parciales.
+Calcula el gradiente de una función en un punto dado utilizando aproximaciones numéricas de las derivadas parciales.
 
-   Parámetros
-   ----------
-   - ``f`` (callable): Función cuyo gradiente se busca calcular.
-   - ``x`` (array-like): Punto en el cual se evalúa el gradiente.
-   - ``deltaX`` (float, optional): Paso para la aproximación numérica de las derivadas parciales. Por defecto es 0.001.
+Parámetros
+----------
+- ``f`` (callable): Función cuyo gradiente se busca calcular.
+- ``x`` (array-like): Punto en el cual se evalúa el gradiente.
+- ``deltaX`` (float, optional): Paso para la aproximación numérica de las derivadas parciales. Por defecto es 0.001.
 
-   Retorna
-   -------
-   - ``list``: Gradiente de ``f`` en ``x``.
+Retorna
+-------
+- ``list``: Gradiente de ``f`` en ``x``.
 
 Función de Cauchy
 -------------------
 
-    Parámetros
-    ----------
+Parámetros
+----------
 
-    - ``funcion`` (callable): Función objetivo a minimizar.
-    - ``x0`` (array-like): Punto inicial para la optimización.
-    - ``epsilon1`` (float): Tolerancia para la norma del gradiente para lograr la convergencia.
-    - ``epsilon2`` (float): Tolerancia para la diferencia relativa entre iteraciones consecutivas.
-    - ``M`` (int): Número máximo de iteraciones permitidas.
-    - ``metodo`` (str): Método para la búsqueda unidireccional ('fibonacci', 'newton', 'dorado', 'interval', 'bounding', 'exhaustiva', 'biseccion', 'secante').
+- ``funcion`` (callable): Función objetivo a minimizar.
+- ``x0`` (array-like): Punto inicial para la optimización.
+- ``epsilon1`` (float): Tolerancia para la norma del gradiente para lograr la convergencia.
+- ``epsilon2`` (float): Tolerancia para la diferencia relativa entre iteraciones consecutivas.
+- ``M`` (int): Número máximo de iteraciones permitidas.
+- ``metodo`` (str): Método para la búsqueda unidireccional ('fibonacci', 'newton', 'dorado', 'interval', 'bounding', 'exhaustiva', 'biseccion', 'secante').
 
-    Retorna
-    -------
+Retorna
+-------
 
-    - ``np.ndarray``: Punto optimizado que aproxima el mínimo de la función.
+- ``np.ndarray``: Punto optimizado que aproxima el mínimo de la función.
 
-    Ejemplo de Uso
-    --------------
+Ejemplo de Uso
+--------------
 
-    .. code-block:: python
-        
-        import numpy as np
-        import paqueteoptimizacionelizabethrm as op 
+.. code-block:: python
+    
+    import numpy as np
+    import paqueteoptimizacionelizabethrm as op 
 
-        p7 = op.multivariable.metodosgradiente.newton(op.funciones.himmelblau_function, np.array([1.5, 1.0]), 0.0001, 0.0001, 100, 'dorado')
-        print("Algoritmo Newton Gradiente Función Himmelblau", p7)
+    p7 = op.multivariable.metodosgradiente.newton(op.funciones.himmelblau_function, np.array([1.5, 1.0]), 0.0001, 0.0001, 100, 'dorado')
+    print("Algoritmo Newton Gradiente Función Himmelblau", p7)
