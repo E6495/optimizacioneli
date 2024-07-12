@@ -3,10 +3,12 @@
 Método de Hooke-Jeeves
 =======================
 
-El método de Hooke-Jeeves es un algoritmo de optimización heurístico que utiliza un enfoque de búsqueda directa y patrones para encontrar el mínimo de una función.
+El método de Hooke-Jeeves es un algoritmo de optimización heurístico que utiliza un enfoque de búsqueda directa y patrones para encontrar el mínimo de una función. Consiste en realizar movimientos exploratorios para encontrar el mejor punto en la vecindad del punto actual, seguidos de movimientos de patrón que combinan puntos para avanzar hacia una mejor solución. 
 
 Función de movimiento exploratorio
 --------------------
+
+   El punto actual se perturba en direcciones positivas y negativas a lo largo de cada variable, una a la vez, y se registra el mejor punto. El punto actual se cambia al mejor punto al final de cada perturbación de variable.
 
    Parámetros
    ----------
@@ -21,6 +23,8 @@ Función de movimiento exploratorio
 Función de movimiento de patrón
 ------------------
 
+   Un nuevo punto se encuentra al saltar desde el punto mejor actual en la dirección que conecta el punto mejor anterior con el punto base actual.
+
    Parámetros
    ----------
    - ``x_current`` (array-like): Punto actual en el espacio de búsqueda.
@@ -32,6 +36,8 @@ Función de movimiento de patrón
 
 Función de Hooke Jeeves
 ---------------------
+
+   Método Hooke Jeeves
 
    Parámetros
    ----------
@@ -50,20 +56,9 @@ Función de Hooke Jeeves
 
    .. code-block:: python
 
-      import numpy as np
-      from optimizacioneli.multivariable import exploratory_move, pattern_movement, hooke_jeeves
+      import numpy as np 
+      import paqueteoptimizacionelizabethrm as op 
 
-      # Función objetivo de prueba (parábola)
-      def objective_function(x, y):
-          return x**2 + y**2
-
-      # Punto inicial y parámetros del algoritmo
-      initial_point = [5.0, 5.0]
-      deltas = [1.0, 1.0]
-      alpha = 2.0
-      epsilon = 1e-5
-
-      # Aplicar el método de Hooke-Jeeves
-      best_solution, iterations = hooke_jeeves(initial_point, deltas, alpha, epsilon, objective_function)
-      print("Mejor solución encontrada:", best_solution)
-      print("Iteraciones realizadas:", iterations)
+      p2, iterations = op.multivariable.metodosdirectos.hookejeeves.hooke_jeeves([1, 2], [0.1, 0.1], 1.5, 0.001, lambda *args: op.funciones.himmelblau_function(list(args))
+      print("Algoritmo Hooke Jeeves Función Himmenblau:", p2, iterations)
+)

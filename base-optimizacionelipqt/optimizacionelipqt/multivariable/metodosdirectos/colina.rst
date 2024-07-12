@@ -23,7 +23,7 @@ Función generación random
 Función colina
 ----------
 
-   Algoritmo de Random Walk para la optimización.
+   Algoritmo de Random Walk Colina para la optimización.
 
    Parámetros
    ----------

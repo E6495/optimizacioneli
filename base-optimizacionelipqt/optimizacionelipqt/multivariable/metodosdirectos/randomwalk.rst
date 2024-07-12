@@ -3,14 +3,17 @@
 Algoritmo Random Walk
 =====================
 
+El algoritmo Random Walk es una técnica estocástica que genera pasos aleatorios para explorar el espacio de búsqueda y encontrar soluciones óptimas.
+No utiliza información extra del problema durante la búsqueda. Inicia en un lugar aleatorio y toma pasos aleatorios.
+
 Función Random Walk
 ----------------
 
-El algoritmo Random Walk es una técnica estocástica que genera pasos aleatorios para explorar el espacio de búsqueda y encontrar soluciones óptimas.
+   Implementa el algoritmo Random Walk para minimizar una función objetivo.
 
    Parámetros
    ----------
-   - ``f`` (callable): Función objetivo que se desea minimizar.
+   - ``f`` (callable): Función objetivo a minimizar.
    - ``x0`` (list or numpy array): Punto de inicio del algoritmo.
    - ``max_iter`` (int): Número máximo de iteraciones.
    - ``mu`` (float): Media de la distribución normal para generar pasos aleatorios.
@@ -27,18 +30,7 @@ El algoritmo Random Walk es una técnica estocástica que genera pasos aleatorio
    .. code-block:: python
 
       import numpy as np
-      from optimizacioneli.multivariable import random_walk
+      import paqueteoptimizacionelizabethrm as op
 
-      # Definir una función de prueba
-      def objective_function(x):
-          return x[0]**2 + x[1]**2
-
-      # Punto inicial y parámetros del algoritmo
-      x0 = np.array([1.0, 2.0])
-      max_iter = 1000
-      mu = 0.0
-      sigma = 0.1
-
-      # Aplicar el algoritmo de Random Walk
-      best_solution, history = random_walk(objective_function, x0, max_iter, mu, sigma)
-      print("Mejor solución encontrada:", best_solution)
+      p4, h = op.multivariable.metodosdirectos.randomwalk.random_walk(op.funciones.himmelblau_function, [0, 2], 1000, 0.3, 0.8)
+      print("Algoritmo Random Walk Función Himmenblau", p4)

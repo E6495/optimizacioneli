@@ -4,10 +4,12 @@
 Algoritmo de Mead (Nelder-Mead)
 ===============================
 
-El algoritmo de Mead, también conocido como método Nelder-Mead, es un método de optimización sin restricciones que utiliza un simplex para encontrar el mínimo de una función.
+El algoritmo de Mead, también conocido como método Nelder-Mead, es un método de optimización sin restricciones que utiliza un simplex para encontrar el mínimo de una función. consiste en utilizar N+1 puntos en el simplex inicial para un problema de N variables y, en cada iteración, reemplazar el peor punto mediante una serie de operaciones de reflexión, expansión y contracción basadas en los valores de la función. Se calcula el centroide de todos los puntos excepto el peor, se refleja el peor punto respecto al centroide y, dependiendo del valor de la función en el punto reflejado, se puede realizar una expansión o una contracción. Este proceso se repite hasta alcanzar la convergencia.
 
 Función Simplex
 --------------
+
+   Estructura del simplex inicial para el algoritmo de Mead (Nelder-Mead).
 
    Parámetros
    ----------
@@ -20,6 +22,9 @@ Función Simplex
 
 Funcion Mead Simplex
 --------------------
+
+   Implementación del método de Mead (Nelder-Mead) para optimización sin restricciones.
+
    Parámetros
    ----------
    - ``funcion`` (callable): Función objetivo que se desea minimizar.
@@ -38,22 +43,7 @@ Funcion Mead Simplex
    .. code-block:: python
 
       import numpy as np
-      from optimizacioneli.multivariable import simplex_inicial, mead_simplex
+      import paqueteoptimizacionelizabethrm as op 
 
-      # Definir una función de prueba
-      def objective_function(x):
-          return (x[0] - 1)**2 + (x[1] - 2)**2
-
-      # Punto inicial y parámetros del algoritmo
-      x0 = [0.0, 0.0]
-      epsilon = 1e-5
-      gamma = 1.0
-      beta = 0.5
-
-      # Generar el simplex inicial
-      initial_simplex = simplex_inicial(0.5, x0)
-      print("Simplex inicial:", initial_simplex)
-
-      # Aplicar el algoritmo de Mead (Nelder-Mead)
-      best_solution, history = mead_simplex(objective_function, x0, epsilon, gamma, beta)
-      print("Mejor solución encontrada:", best_solution)
+      p3, hsf = op.multivariable.metodosdirectos.neldermeadsimplex.mead_simplex(op.funciones.himmelblau_function, np.array([1.0, 2.0]), 0.00001, 2, 0.5)
+      print("Algoritmo Mead Simplex Función Himmenblau", p3)
