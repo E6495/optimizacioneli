@@ -51,7 +51,7 @@ Retorna
 ~~~~~~~~~~~
 - ``list``: Gradiente de ``f`` en ``x``.
 
-Función de Cauchy
+Función de Newton
 -------------------
 
 Parámetros
